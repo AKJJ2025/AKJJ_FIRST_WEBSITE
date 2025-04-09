@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKJJ Developers - Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Georgia&display=swap" rel="stylesheet">
+    <script defer>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            color: #444;
+            background-color: #FFF;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+			background: url("b2.jpg") no-repeat center center/cover;
+        }
+
+        h1, h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #444;
+            text-shadow: 1px 1px 5px #EEE;
+        }
+		
+		h2 {
+			font-size: 44px;
+			}
+
+        .header {
+            color: #FFD700;
+            padding: 20px 0;
+            border-bottom: 2px solid #664229;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: url("C:/Users/ZBOOK/Downloads/download (5).jpg") no-repeat center center/cover;
+        }
+
+        .header .logo {
+            font-size: 48px;
+            font-weight: bold;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 2px 2px 5px #FFD700;
+        }
+
+        nav {
+            background: #321f1b;
+			display: flex;
+			justify-content: center;
+            opacity: 0.79;
+        }
+
+        .nav-links {
+            margin: 0;
+            padding: 10px 20px;
+			display: flex;
+			list-style: none;
+			justify-content: center;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #FFD700;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            background: #FFD700;
+            color: black;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background: #FFD700;
+            margin: 5px 0;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #444;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+		
+		.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: #F4F4F4;
+}
+
+.services h2 {
+    font-size: 42px;
+    color: #321f1b;
+}
+
+.services p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.service-box {
+    background: white;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 10px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+    color: #321f1b;
+    font-size: 22px;
+}
+
+.service-box p {
+    font-size: 18px;
+    color: #444;
+}
+
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FFD700, #FFAA00);
+            color: black;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: #FFF;
+        }
+
+        .about-boxes {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .about-box {
+            background: #F9F9F9;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .about-box h3 {
+            color: #321f1b;
+            font-size: 22px;
+        }
+
+        .about p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+		
+		.projects {
+    text-align: center;
+    padding: 50px 20px;
+    background: #FFF;
+}
+
+.testimonials {
+    text-align: center;
+    background-color: white;
+    padding: 40px 20px;
+}
+
+.testimonials h2 {
+    color: #222;
+}
+
+.testimonial-card {
+    background-color: #fafafa;
+    padding: 20px;
+    margin: 15px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-card h4 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.projects h2 {
+    font-size: 42px;
+    color: #321f1b;
+}
+
+.project-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-box {
+    background: #FFD700;
+    color: #321f1b;
+    font-size: 22px;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-box img {
+    width: 100%; /* Ensures the image fills the container width */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crops the image to maintain aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.enquiry {
+    background: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.enquiry .container1 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.enquiry h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.enquiry p {
+    font-size: 16px;
+    color: #666;
+}
+
+.enquiry form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.enquiry input, .enquiry textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.enquiry button {
+    background: #b89e69;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.enquiry button:hover {
+    background: #a38c5d;
+}
+
+
+.project-description {
+    font-size: 20px;
+    color: #444;
+    margin-top: 20px;
+}
+
+		
+        .home-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .home-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #FFD700;
+        }
+
+        .footer {
+            background: #FFF;
+            color: #444;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #DDD;
+            font-size: 14px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 100%;
+                display: none;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .about-boxes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    var name = document.querySelector("[name='name']").value;
+    var email = document.querySelector("[name='email']").value;
+    var message = document.querySelector("[name='message']").value;
+    
+    if (!name || !email || !message) {
+        alert("Please fill in all required fields.");
+        event.preventDefault();
+    }
+});
+</script>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/akjj-png-copy.png" alt="AKJJ Logo" />
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="build_grade.html">Build Guide</a></li>
+					<li><a href="#enquiry">Contact Us</a></li>
+				</ul>
+			</nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to AKJJ Developers</h2>
+        <p>Discover luxury living with our exclusive real estate properties, designed for comfort, elegance, and sophistication.</p>
+        <a href="forsale.html" class="cta-button">View Listings</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About AKJJ Developers</h2>
+        <div class="about-boxes">
+            <div class="about-box">
+                <h3>Mission</h3>
+                <p>Our mission is to deliver top-notch construction and consultancy solutions with a strong focus on client satisfaction and exceptional quality. We are passionate about exceeding expectations through open communication, thorough attention to detail, and a steadfast commitment to safety. By completing projects efficiently and upholding the highest standards, we aim to build lasting partnerships with our clients and craft timeless spaces that inspire and endure.</p>
+            </div>
+            <div class="about-box">
+                <h3>Vision</h3>
+                <p>Our vision is to ascend as the most esteemed and trusted partner in construction and consultancy, renowned for our relentless pursuit of excellence, innovation, and bespoke client-focused solutions. We endeavor to redefine industry benchmarks by delivering projects that not only inspire unparalleled confidence but also bring our clients’ unique aspirations to life. With every endeavor, we seek to leave an indelible mark of grandeur and value, enriching the communities we proudly serve.</p>
+            </div>
+            <div class="about-box">
+                <h3>Overview</h3>
+                <p>AKJJ Developers & Consultancy takes pride in redefining excellence by crafting every project into a masterpiece of precision, innovation, and elegance. Revered for our unparalleled commitment to quality and artistry, we transform visions into enduring realities that reflect sophistication and grandeur. With a client-first ethos, we ensure seamless communication, timely delivery, and meticulous attention to every detail, fostering enduring trust and admiration. As a trailblazer in premier construction and consultancy, AKJJ Developers & Consultancy stands as a symbol of prestige, creating iconic spaces that inspire confidence, elevate standards, and leave an everlasting imprint on the communities we proudly serve.</p>
+            </div>
+        </div>
+    </section>
+	
+	    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <p>What we offer</p>
+        <div class="service-boxes">
+            <div class="service-box">
+                <h3>Innovative Architectural Design Solutions</h3>
+                <p>Offering professional architectural design services that blend creativity with precision. We ensure every project is tailored to meet your unique needs and aspirations.</p>
+            </div>
+            <div class="service-box">
+                <h3>Passion for Enduring Quality</h3>
+                <p>At AKJJ Developers & Consultancy, we have a deep-rooted passion for enduring quality, ensuring that every project we deliver stands the test of time.</p>
+            </div>
+        </div>
+    </section>
+	
+	<section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-boxes">
+        <div class="project-box">
+            <img src="images/proj4.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+        </div>
+        <div class="project-box">
+            <img src="images/proj5.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+        </div>
+		<div class="project-box">
+            <img src="images/proj3.jpg" alt="Project 2">
+            <h3>Project 3</h3>
+        </div>
+		<div class="project-box">
+            <img src="images/proj1.jpg" alt="Project 2">
+            <h3>Project 4</h3>
+        </div>
+		<div class="project-box">
+            <img src="images/proj2.jpg" alt="Project 2">
+            <h3>Project 5</h3>
+        </div>
+    </div>
+    <p class="project-description">
+        From residential masterpieces to industrial innovations, our projects showcase excellence in every detail.
+    </p>
+</section>
+
+
+<section class="enquiry" id="enquiry">
+    <div class="container1">
+        <h2>Enquiry Form</h2>
+        <p>Have questions? Fill out the form and we'll get back to you!</p>
+        
+        <!-- Contact Number -->
+        <p><strong>Contact Us:</strong> <a href="tel:+7550038352">7550038352</a></p>
+
+        <form action="https://formspree.io/f/mzzeyplp" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 AKJJ DEVELOPERS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
