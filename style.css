@@ -270,7 +270,6 @@ nav {
 .project-box img {
     width: 100%;
     /* Ensures the image fills the container width */
-    height: 200px;
     /* Set a fixed height for all images */
     object-fit: cover;
     /* Crops the image to maintain aspect ratio */
@@ -365,73 +364,42 @@ nav {
     margin: 0;
     font-weight: bold;
 }
-
-/* Extra Small Devices (phones, <576px) */
-@media (max-width: 575.98px) {
-    .header .logo img {
-        width: 120px;
-    }
-
-    .hero h2 {
-        font-size: 36px;
-    }
-
-    .hero p,
-    .services p,
-    .about p,
-    .enquiry p {
-        font-size: 16px;
-    }
-
-    .project-box {
-        min-width: 100%;
-    }
-
-    .testimonial-card {
-        width: 90%;
-    }
-
-    .nav-links {
-        top: 60px;
-    }
-}
-
-/* Small Devices (phones, 576px - 767px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .hero h2 {
-        font-size: 40px;
-    }
-
-    .project-boxes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 1024px) {
+    .project-boxes,
     .about-boxes,
     .service-boxes {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .testimonial-card {
+    .project-box,
+    .about-box,
+    .service-box {
+        flex: 1 1 45%;
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .enquiry {
         width: 80%;
+        padding: 20px;
+    }
+
+    .enquiry input,
+    .enquiry textarea {
+        width: 100%;
     }
 }
 
-/* Medium Devices (tablets, 768px - 991px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .hero h2 {
-        font-size: 48px;
-    }
-
+@media (max-width: 768px) {
     .nav-links {
-        position: absolute;
         flex-direction: column;
-        background: #321f1b;
-        top: 70px;
+        position: absolute;
+        top: 80px;
         right: 0;
         width: 100%;
         display: none;
+        background-color: #321f1b;
         z-index: 1000;
     }
 
@@ -439,49 +407,113 @@ nav {
         display: flex;
     }
 
+    .nav-links li {
+        margin: 15px 0;
+    }
+
     .hamburger {
         display: flex;
     }
 
-    .service-box,
-    .about-box {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
+    .about-boxes,
+    .service-boxes,
     .project-boxes {
-        display: flex;
-        flex-wrap: column;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
+    .about-box,
+    .service-box,
     .project-box {
-        width: 45%;
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services h2,
+    .projects h2,
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .project-box img {
+        height: 180px;
+    }
+
+    .enquiry {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .enquiry label {
+        font-size: 16px;
+    }
+
+    .enquiry input,
+    .enquiry textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .enquiry button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-box,
+    .about-box,
+    .service-box {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 16px;
     }
 
     .testimonial-card {
-        width: 70%;
-    }
-}
-
-/* Large Devices (laptops, 992px - 1199px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .hero h2 {
-        font-size: 52px;
+        width: 90%;
     }
 
-    .project-box {
-        width: 30%;
-    }
-}
-
-/* Extra Large Devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
+    .project-box img {
+        height: 160px;
     }
 
-    .project-box {
-        width: 20%;
+    .enquiry {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .enquiry label {
+        font-size: 14px;
+    }
+
+    .enquiry input,
+    .enquiry textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .enquiry button {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
