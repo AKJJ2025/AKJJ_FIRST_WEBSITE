@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Service Categories | Your Construction Company</title>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -13,105 +21,106 @@
     }
 
     .container {
-            width: 90%;
-            margin: 0 auto;
-			background: url("b2.jpg") no-repeat center center/cover;
-        }
+      width: 90%;
+      margin: 0 auto;
+      background: url("b2.jpg") no-repeat center center/cover;
+    }
 
-        h1, h2 {
-            font-family: 'Great Vibes', cursive;
-            color: #444;
-            text-shadow: 1px 1px 5px #EEE;
-        }
-		
-		h2 {
-			font-size: 44px;
-			}
+    h1,
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      color: #444;
+      text-shadow: 1px 1px 5px #EEE;
+    }
 
-        .header {
-            color: #FFD700;
-            padding: 20px 0;
-            border-bottom: 2px solid #664229;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: url("C:/Users/ZBOOK/Downloads/download (5).jpg") no-repeat center center/cover;
-        }
+    h2 {
+      font-size: 44px;
+    }
 
-        .header .logo {
-            font-size: 48px;
-            font-weight: bold;
-            font-family: 'Great Vibes', cursive;
-            text-shadow: 2px 2px 5px #FFD700;
-        }
+    .header {
+      color: #FFD700;
+      padding: 20px 0;
+      border-bottom: 2px solid #664229;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: url("C:/Users/ZBOOK/Downloads/download (5).jpg") no-repeat center center/cover;
+    }
 
-        nav {
-            background: #321f1b;
-			display: flex;
-			justify-content: center;
-            opacity: 0.79;
-        }
+    .header .logo {
+      font-size: 48px;
+      font-weight: bold;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 2px 2px 5px #FFD700;
+    }
 
-        .nav-links {
-            margin: 0;
-            padding: 10px 20px;
-			display: flex;
-			list-style: none;
-			justify-content: center;
-        }
+    nav {
+      background: #321f1b;
+      display: flex;
+      justify-content: center;
+      opacity: 0.79;
+    }
 
-        .nav-links li {
-            margin-left: 15px;
-        }
+    .nav-links {
+      margin: 0;
+      padding: 10px 20px;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: #FFD700;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            font-size: 16px;
-        }
+    .nav-links li {
+      margin-left: 15px;
+    }
 
-        .nav-links a:hover {
-            background: #FFD700;
-            color: black;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: #FFD700;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      font-size: 16px;
+    }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
+    .nav-links a:hover {
+      background: #FFD700;
+      color: black;
+    }
 
-        .hamburger div {
-            width: 30px;
-            height: 3px;
-            background: #FFD700;
-            margin: 5px 0;
-        }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
 
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            color: #444;
-            padding: 60px 20px;
-        }
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background: #FFD700;
+      margin: 5px 0;
+    }
 
-        .hero h2 {
-            font-size: 55px;
-            margin-bottom: 20px;
-            font-family: 'Great Vibes', cursive;
-        }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #444;
+      padding: 60px 20px;
+    }
 
-        .hero p {
-            font-size: 20px;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
+    .hero h2 {
+      font-size: 55px;
+      margin-bottom: 20px;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
 
     .service-wrapper {
       max-width: 900px;
@@ -148,54 +157,55 @@
       object-fit: contain;
     }
 
-	.enquiry {
-    background: #f8f8f8;
-    padding: 50px 20px;
-    text-align: center;
-}
+    .enquiry {
+      background: #f8f8f8;
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-.enquiry .container1 {
-    max-width: 600px;
-    margin: 0 auto;
-}
+    .enquiry .container1 {
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-.enquiry h2 {
-    font-size: 28px;
-    color: #222;
-    margin-bottom: 10px;
-}
+    .enquiry h2 {
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 10px;
+    }
 
-.enquiry p {
-    font-size: 16px;
-    color: #666;
-}
+    .enquiry p {
+      font-size: 16px;
+      color: #666;
+    }
 
-.enquiry form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+    .enquiry form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-.enquiry input, .enquiry textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+    .enquiry input,
+    .enquiry textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-.enquiry button {
-    background: #b89e69;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
+    .enquiry button {
+      background: #b89e69;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
 
-.enquiry button:hover {
-    background: #a38c5d;
-}
+    .enquiry button:hover {
+      background: #a38c5d;
+    }
 
     footer {
       text-align: center;
@@ -205,28 +215,128 @@
       font-size: 0.9rem;
       margin-top: 3rem;
     }
+
+    /* Tablets (768px and below) */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .service-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logos img {
+        max-width: 100px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+
+    /* Mobile (480px and below) */
+    @media (max-width: 480px) {
+      .header .logo img {
+        width: 120px;
+      }
+
+      .hamburger {
+        display: flex;
+        align-self: flex-end;
+        margin: 10px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .service-section {
+        padding: 1rem;
+      }
+
+      .logos img {
+        max-width: 80px;
+      }
+
+      .enquiry h2 {
+        font-size: 22px;
+      }
+
+      .enquiry p {
+        font-size: 14px;
+      }
+
+      .enquiry input,
+      .enquiry textarea {
+        font-size: 14px;
+      }
+
+      .enquiry button {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="images/akjj-png.png" alt="AKJJ Logo" />
-            </div>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <nav>
-				<ul class="nav-links">
-					<li><a href="Home.html">Home</a></li>
-					<li><a href="#enquiry">Contact Us</a></li>
-				</ul>
-			</nav>
-        </div>
-    </header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/akjj-png.png" alt="AKJJ Logo" />
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="#enquiry">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <div class="service-wrapper">
     <div class="service-section">
@@ -234,13 +344,13 @@
       <div class="logos">
         <img src="images/bg1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/bg2.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/bg3.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/bg4.jpg" alt="VM Consultants Logo">
       </div>
     </div>
@@ -250,10 +360,10 @@
       <div class="logos">
         <img src="images/s1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/s2.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/s3.jpg" alt="VM Consultants Logo">
       </div>
     </div>
@@ -263,102 +373,103 @@
       <div class="logos">
         <img src="images/rmc1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/rmc2.jpg" alt="VM Consultants Logo">
       </div>
     </div>
-	
-	<div class="service-section">
+
+    <div class="service-section">
       <div class="category">Plumbing</div>
       <div class="logos">
         <img src="images/p1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/p2.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/p3.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/p4.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/p5.jpg" alt="VM Consultants Logo">
       </div>
     </div>
-	
-	<div class="service-section">
+
+    <div class="service-section">
       <div class="category">Electrical</div>
       <div class="logos">
         <img src="images/e1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/e2.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/e3.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/e4.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/e5.jpg" alt="VM Consultants Logo">
       </div>
     </div>
-	
-	<div class="service-section">
+
+    <div class="service-section">
       <div class="category">Tiling</div>
       <div class="logos">
         <img src="images/t1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/t2.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/t3.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/t4.jpg" alt="VM Consultants Logo">
       </div>
     </div>
-	
-	<div class="service-section">
+
+    <div class="service-section">
       <div class="category">Painting</div>
       <div class="logos">
         <img src="images/pa1.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/pa2.jpg" alt="VM Consultants Logo">
       </div>
-	  <div class="logos">
+      <div class="logos">
         <img src="images/pa3.jpg" alt="VM Consultants Logo">
       </div>
     </div>
-	
+
   </div>
-  
+
   <section class="enquiry" id="enquiry">
     <div class="container1">
-        <h2>Enquiry Form</h2>
-        <p>Have questions? Fill out the form and we'll get back to you!</p>
-        
-        <!-- Contact Number -->
-        <p><strong>Contact Us:</strong> <a href="tel:+917550038532">7550038532</a></p>
+      <h2>Enquiry Form</h2>
+      <p>Have questions? Fill out the form and we'll get back to you!</p>
 
-        <form action="https://formspree.io/f/mzzeyplp" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+      <!-- Contact Number -->
+      <p><strong>Contact Us:</strong> <a href="tel:+917550038532">7550038532</a></p>
+
+      <form action="https://formspree.io/f/mzzeyplp" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-</section>
-  
+  </section>
+
   <footer>
     &copy; 2025 AKJJ DEVELOPERS. All Rights Reserved.
   </footer>
 
 </body>
+
 </html>
